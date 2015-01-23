@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  name: provision the infrastructure
+
+  roles:
+  - infra
+
+
+- hosts: just_created
+  name: configure the servers
+  sudo: yes
+
+  roles:
+  - apache 

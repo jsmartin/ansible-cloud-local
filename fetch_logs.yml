@@ -1,0 +1,7 @@
+- hosts: web
+  sudo: yes
+
+  tasks:
+
+  - name: fetching log file
+    fetch: src="{{ log_file }}" dest=/tmp/fetched
