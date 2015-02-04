@@ -1,6 +1,8 @@
+<h1>{{ apache_header }}</h1>
 {{ apache_test_message }} {{ ansible_distribution }} {{ ansible_distribution_version }}  <br>
+Flux Capacitor Setting: {{ apache_flux_capacitors }} <br>
 Current Host: {{ ansible_hostname }} <br>
 Server list: <br>
-{% for host in groups[web_group] %}
+{% for host in groups[app_group] %}
 {{ host }} <br>
 {% endfor %}
